@@ -61,10 +61,10 @@
 // int main(){
 //     char p[8]="Morning";
 //     char s[10]="";
-//     // strcpy(s,p);
-//     // cout<<s<<endl;
+//     strcpy(s,p);
+//     cout<<s<<endl;
 
-//     strncpy(s,p,3);
+//     strncpy(s,p,6);
 //     cout<<s<<endl;
 // }
 
@@ -121,12 +121,32 @@
 
 
 // Enter the string by using class and objects
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str;
+//     cout<<"Enter the string"<<endl;
+//     getline(cin,str);
+//     cout<<str<<endl;
+// }
+
+// Functions of String
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str;
+//     cout<<"Enter the String"<<endl;
+//     getline(cin,str);
+//     cout<<str.size()<<endl;
+// }
+
 #include<iostream>
 #include<string>
 using namespace std;
 int main(){
-    string str;
-    cout<<"Enter the string"<<endl;
-    getline(cin,str);
-    cout<<str<<endl;
+    string str={""};
+    cout<<str.empty()<<endl;
 }
