@@ -187,17 +187,60 @@
 // }
 
 // String Iterator
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={"HelloWorld"};
+//     string::reverse_iterator it;
+//     // for(it=str.begin(); it!=str.end(); it++){
+//     //     cout<<*it;
+//     // }
+
+//     for(it=str.rbegin(); it!=str.rend(); it++){
+//         cout<<*it;
+//     }
+// }
+
+// Practice Question
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str="WELCOME";
+//     for(int i=0; str[i]!='\0'; i++){
+//         if(str[i]>=65 && str[i]<=90){
+//             str[i]=str[i]+32;
+//         }
+//     }
+//     cout<<str<<endl;
+//     return 0;
+// }
+
 #include<iostream>
 #include<string>
 using namespace std;
 int main(){
-    string str={"HelloWorld"};
-    string::reverse_iterator it;
-    // for(it=str.begin(); it!=str.end(); it++){
-    //     cout<<*it;
-    // }
+    string str="How are you Sanskriti";
+    int vowels=0;
+    int consonant=0;
+    int space=0;
 
-    for(it=str.rbegin(); it!=str.rend(); it++){
-        cout<<*it;
+    for(int i=0; str[i]!='\0'; i++){
+        if(str[i]=='A' || str[i]=='E'|| str[i]=='I' || str[i]=='O' || str[i]=='U' || str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+            vowels++;
+        }
+
+        else if(str[i]==' '){
+            space++;
+        }
+
+        else{
+            consonant++;
+        }
     }
+
+    cout<<vowels <<"Vowels"<<endl;
+    cout<<consonant <<"Consonant"<<endl;
+    cout<<space+1 <<"Words"<<endl;
 }
