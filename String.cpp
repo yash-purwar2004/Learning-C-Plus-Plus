@@ -143,10 +143,37 @@
 //     cout<<str.size()<<endl;
 // }
 
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={""};
+//     cout<<str.empty()<<endl;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={"Hello"};
+//     str.append("World");
+//     cout<<str<<endl;
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={"Hello"};
+//     str.insert(3,"kk");
+//     cout<<str<<endl;
+// }
+
 #include<iostream>
 #include<string>
 using namespace std;
 int main(){
-    string str={""};
-    cout<<str.empty()<<endl;
+    string str={"HelloMoto"};
+    cout<<str.find_first_of('o',5);
+    cout<<str.find_last_of("l");
 }
