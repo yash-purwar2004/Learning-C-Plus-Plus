@@ -169,11 +169,35 @@
 //     cout<<str<<endl;
 // }
 
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={"HelloMoto"};
+//     cout<<str.find_first_of('o',5);
+//     cout<<str.find_last_of("l");
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+// int main(){
+//     string str={"HelloSanskriti"};
+//     cout<<str.substr(5);
+// }
+
+// String Iterator
 #include<iostream>
 #include<string>
 using namespace std;
 int main(){
-    string str={"HelloMoto"};
-    cout<<str.find_first_of('o',5);
-    cout<<str.find_last_of("l");
+    string str={"HelloWorld"};
+    string::reverse_iterator it;
+    // for(it=str.begin(); it!=str.end(); it++){
+    //     cout<<*it;
+    // }
+
+    for(it=str.rbegin(); it!=str.rend(); it++){
+        cout<<*it;
+    }
 }
