@@ -27,23 +27,37 @@
 //     cout<<d<<endl;
 // }
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
     
-template<class T> // Function Template
-T maxim(T a,T b)
-    {
-       return a+b;
-    }
+// template<class T> // Function Template
+// T maxim(T a,T b)
+//     {
+//        return a+b;
+//     }
     
-int main()
-{
-	cout<<maxim(12,14)<<endl;
-	cout<<maxim(2.3,1.4)<<endl;
-	cout<<maxim(2.3f,5.6f)<<endl;
+// int main()
+// {
+// 	cout<<maxim(12,14)<<endl;
+// 	cout<<maxim(2.3,1.4)<<endl;
+// 	cout<<maxim(2.3f,5.6f)<<endl;
 	
-	return 0;
+// 	return 0;
 	    
-}
+// }
     
 	 
+#include<iostream> // Pass by Value
+using namespace std;
+void swap(int a, int b){
+	int temp;
+	temp = a;
+	a=b;
+	b=temp;
+}
+
+int main(){
+	int x = 10, y = 20;
+	swap(x,y);
+	cout<<x<<" "<<y;
+}
