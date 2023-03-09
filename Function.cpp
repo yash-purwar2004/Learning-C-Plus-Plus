@@ -47,17 +47,30 @@
 // }
     
 	 
-#include<iostream> // Pass by Value
+// #include<iostream> // Pass by Value
+// using namespace std;
+// void swap(int a, int b){
+// 	int temp;
+// 	temp = a;
+// 	a=b;
+// 	b=temp;
+// }
+
+// int main(){
+// 	int x = 10, y = 20;
+// 	swap(x,y);
+// 	cout<<x<<" "<<y;
+// }
+
+#include<iostream> // Return by reference
 using namespace std;
-void swap(int a, int b){
-	int temp;
-	temp = a;
-	a=b;
-	b=temp;
+int &fun(int &a){
+	cout<<a;
+	return a;
 }
 
 int main(){
-	int x = 10, y = 20;
-	swap(x,y);
-	cout<<x<<" "<<y;
+	int x = 10;
+	fun(x) = 25;
+	cout<<x;
 }
