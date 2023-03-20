@@ -1,18 +1,29 @@
 #include<iostream>
 using namespace std;
-class hero{
-    //properties
+
+class Hero{
     public:
     int health;
+
+    private:
+    char level;
+
+    public:
+    char getlevel(){
+        return level;
+    }
+
+    void setlevel(char ch){
+        level = ch;
+    }
 };
 
 int main(){
-    // creation of objects
-    hero ramesh;
+    Hero h1;
+    cout<<"Size:"<<sizeof(h1)<<endl;
+    h1.health = 70;
+    cout<<"Health is "<<h1.health<<endl;
 
-    cin>>ramesh.health;
-    cout<<"Size of : "<<sizeof(ramesh)<<endl;
-    cout<<"health is "<<ramesh.health<<endl;
-    // we can access the health using dot operator
-    return 0;
+    h1.setlevel('A');
+    cout<<"Level is "<<h1.getlevel()<<endl;
 }
