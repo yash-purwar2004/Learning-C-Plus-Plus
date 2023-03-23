@@ -191,34 +191,68 @@
 // Encapsulation code
 // C++ program to demonstrate
 // Encapsulation
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// class Encapsulation {
+// private:
+// 	// Data hidden from outside world
+// 	int x;
+
+// public:
+// 	// Function to set value of
+// 	// variable x
+// 	void set(int a){ 
+//         x = a; 
+//     }
+
+// 	// Function to return value of
+// 	// variable x
+// 	int get(){ 
+//         return x; 
+//     }
+// };
+
+// // Driver code
+// int main()
+// {
+// 	Encapsulation obj;
+// 	obj.set(5);
+// 	cout << obj.get();
+// 	return 0;
+// }
+
+
+
+
+
+// Inheritance
+#include<iostream>
 using namespace std;
+class human{
+    public:
+    int age;
+    int height;
+    int weight;
 
-class Encapsulation {
-private:
-	// Data hidden from outside world
-	int x;
-
-public:
-	// Function to set value of
-	// variable x
-	void set(int a){ 
-        x = a; 
+    int setage(int a){
+        age = a;
     }
 
-	// Function to return value of
-	// variable x
-	int get(){ 
-        return x; 
+    int getage(){
+        return age;
     }
+
 };
 
-// Driver code
-int main()
-{
-	Encapsulation obj;
-	obj.set(5);
-	cout << obj.get();
-	return 0;
-}
+class sanskriti: public human{
+    public:
+    int health = 20;
+};
 
+
+int main(){
+    sanskriti yash;
+    yash.setage(10);
+    cout<<yash.getage()<<endl<<yash.health<<endl;
+}
