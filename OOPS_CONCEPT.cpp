@@ -152,44 +152,73 @@
 
 
 // Copy Constructor
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+
+// class hero{
+//     public:
+//         int health;
+//         char level;
+
+//         hero(int x, char y){
+//             health = x;
+//             level = y;
+//         }
+
+//         int gethealth(){
+//             return health;
+//         }
+
+//         char getlevel(){
+//             return level;
+//         }
+// };
+
+// int main(){
+//     hero ramesh(20,'B');
+//     hero suresh(50,'H');
+//     ramesh = suresh;
+//     cout<<"Health is "<<ramesh.health<<endl;
+// }
+
+
+
+
+
+
+
+
+// Encapsulation code
+// C++ program to demonstrate
+// Encapsulation
+#include <iostream>
 using namespace std;
 
-class hero{
-    public:
-        int health;
-        char level;
+class Encapsulation {
+private:
+	// Data hidden from outside world
+	int x;
 
-        hero(int x, char y){
-            health = x;
-            level = y;
-        }
+public:
+	// Function to set value of
+	// variable x
+	void set(int a){ 
+        x = a; 
+    }
 
-        int gethealth(){
-            return health;
-        }
-
-        char getlevel(){
-            return level;
-        }
+	// Function to return value of
+	// variable x
+	int get(){ 
+        return x; 
+    }
 };
 
-int main(){
-    hero ramesh(20,'B');
-    hero suresh(50,'H');
-
-    ramesh = suresh;
-
-    cout<<"Health is "<<ramesh.health<<endl;
-
-
-
-
+// Driver code
+int main()
+{
+	Encapsulation obj;
+	obj.set(5);
+	cout << obj.get();
+	return 0;
 }
-
-
-
-
-
-
 
