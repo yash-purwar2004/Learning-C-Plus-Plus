@@ -91,11 +91,6 @@
 
 
 
-
-
-
-
-
 // Parametrized Constructor
 // #include<iostream>
 // using namespace std;
@@ -147,6 +142,10 @@
 //     hero R(suresh); // Copy Constructor Called
 //     cout<<"Health is "<<R.health<<endl;
 // }
+
+
+
+
 
 
 
@@ -226,6 +225,10 @@
 
 
 
+
+
+
+
 // Inheritance
 // #include<iostream>
 // using namespace std;
@@ -291,27 +294,56 @@
 
 
 
+
+
 // Operator Overloading
+// #include<iostream>
+// using namespace std;
+// class B{
+//     public:
+//         int a;
+//         int b;
+
+//         public:
+//         int add(){
+//             return a+b;
+//         }
+
+//         void operator+ (B obj){
+//             cout<<"My name is Yash Purwar"<<endl;
+//         }
+// };
+
+// int main(){
+//     B obj1, obj2;
+//     obj1.a = 2;
+//     obj2.b = 3;
+//     obj1 + obj2;
+// }
+
+
+
+
+
+
+// Run time Polymorphism
 #include<iostream>
 using namespace std;
-class B{
+class Human{
     public:
-        int a;
-        int b;
-
-        public:
-        int add(){
-            return a+b;
-        }
-
-        void operator+ (B obj){
+        void show(){
             cout<<"My name is Yash Purwar"<<endl;
         }
 };
 
+class Dog : public Human{
+    public:
+    void show(){
+        cout<<"My name is Sanskriti Gautam"<<endl;
+    }
+};
+
 int main(){
-    B obj1, obj2;
-    obj1.a = 2;
-    obj2.b = 3;
-    obj1 + obj2;
+    Dog object;
+    object.show();
 }
