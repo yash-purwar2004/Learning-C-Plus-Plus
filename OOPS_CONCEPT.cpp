@@ -264,25 +264,54 @@
 
 
 // Function Overloading
+// #include<iostream>
+// using namespace std;
+// class A{
+//     public:
+//     void sayhello(){
+//         cout<<"Hello Sanskriti"<<endl;
+//     }
+
+//     int sayhello(string name, int &n){
+//         cout<<"Hello Sanskriti"<<endl;
+//         return n;
+//     }
+
+//     void sayhello(string name){
+//         cout<<"Hello Sanskriti"<<endl;
+//     }
+// };
+
+// int main(){
+//     A obj;
+//     obj.sayhello();
+// }
+
+
+
+
+
+// Operator Overloading
 #include<iostream>
 using namespace std;
-class A{
+class B{
     public:
-    void sayhello(){
-        cout<<"Hello Sanskriti"<<endl;
-    }
+        int a;
+        int b;
 
-    int sayhello(string name, int &n){
-        cout<<"Hello Sanskriti"<<endl;
-        return n;
-    }
+        public:
+        int add(){
+            return a+b;
+        }
 
-    void sayhello(string name){
-        cout<<"Hello Sanskriti"<<endl;
-    }
+        void operator+ (B obj){
+            cout<<"My name is Yash Purwar"<<endl;
+        }
 };
 
 int main(){
-    A obj;
-    obj.sayhello();
+    B obj1, obj2;
+    obj1.a = 2;
+    obj2.b = 3;
+    obj1 + obj2;
 }
