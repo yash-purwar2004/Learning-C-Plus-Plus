@@ -227,32 +227,62 @@
 
 
 // Inheritance
+// #include<iostream>
+// using namespace std;
+// class human{
+//     public:
+//     int age;
+//     int height = 60;
+//     int weight;
+
+//     int setage(int a){
+//         age = a;
+//     }
+
+//     int getage(){
+//         return age;
+//     }
+
+// };
+
+// class sanskriti: public human{
+//     public:
+//     int health;
+// };
+
+
+// int main(){
+//     sanskriti yash;
+//     yash.setage(10);
+//     cout<<yash.getage()<<endl<<yash.health<<endl<<yash.height<<endl;
+// }
+
+
+
+
+
+
+
+// Function Overloading
 #include<iostream>
 using namespace std;
-class human{
+class A{
     public:
-    int age;
-    int height;
-    int weight;
-
-    int setage(int a){
-        age = a;
+    void sayhello(){
+        cout<<"Hello Sanskriti"<<endl;
     }
 
-    int getage(){
-        return age;
+    int sayhello(string name, int &n){
+        cout<<"Hello Sanskriti"<<endl;
+        return n;
     }
 
+    void sayhello(string name){
+        cout<<"Hello Sanskriti"<<endl;
+    }
 };
-
-class sanskriti: public human{
-    public:
-    int health = 20;
-};
-
 
 int main(){
-    sanskriti yash;
-    yash.setage(10);
-    cout<<yash.getage()<<endl<<yash.health<<endl;
+    A obj;
+    obj.sayhello();
 }
